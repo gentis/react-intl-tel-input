@@ -15,13 +15,13 @@ class IntlTelInputApp extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     let newState = null;
 
-    if (nextProps.value && prevState.value !== nextProps.value) {
+    if (prevState.value !== nextProps.value) {
       newState = {
         value: nextProps.value,
       };
     }
 
-    if (nextProps.disabled && prevState.disabled !== nextProps.disabled) {
+    if (prevState.disabled !== nextProps.disabled) {
       newState = {
         disabled: nextProps.disabled,
       };
